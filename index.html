@@ -85,7 +85,8 @@
 
     .badge-flagship{position:absolute;top:1rem;right:1rem;display:inline-flex;align-items:center;gap:0.375rem;padding:0.25rem 0.75rem;background-color:#D4A843;font-family:Manrope,system-ui,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#1C1C1E}
 
-    .nav-link{font-family:Manrope,system-ui,sans-serif;font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:hsla(60,20%,95%,0.8);transition:color 0.3s}.nav-link:hover,.nav-link-active{color:#D4A843}
+    .nav-link{font-family:Manrope,system-ui,sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:hsla(60,20%,95%,0.8);transition:color 0.3s;white-space:nowrap}.nav-link:hover,.nav-link-active{color:#D4A843}
+    @media (min-width:1280px){.nav-link{font-size:0.875rem;letter-spacing:0.08em}}
 
     .stats-num{background:linear-gradient(135deg,#D4A843,#E5C16C 50%,#D4A843);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-family:Manrope,system-ui,sans-serif;font-size:2.25rem;font-weight:800;letter-spacing:-0.04em;line-height:1;font-feature-settings:"tnum";font-variant-numeric:tabular-nums}
     @media (min-width:640px){.stats-num{font-size:3rem}}@media (min-width:1024px){.stats-num{font-size:3.75rem}}
@@ -274,7 +275,7 @@
         </span>
       </a>
 
-      <nav class="hidden lg:flex items-center gap-10" aria-label="Основная навигация">
+      <nav class="hidden lg:flex items-center gap-5 xl:gap-8" aria-label="Основная навигация">
         <a href="#services" class="nav-link">Услуги</a>
         <a href="#about" class="nav-link">О нас</a>
         <a href="#prices" class="nav-link">Цены</a>
