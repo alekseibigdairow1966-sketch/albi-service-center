@@ -228,7 +228,6 @@
     .blog-card-link:hover{color:#E5C16C}
     .blog-card-link svg{width:14px;height:14px;transition:transform 0.3s}
     .blog-card-link:hover svg{transform:translateX(3px)}
-    .calc-checkbox{accent-color:#D4A843;width:1.25rem;height:1.25rem;flex-shrink:0;cursor:pointer}
   </style>
 
   <script type="application/ld+json">
@@ -279,7 +278,6 @@
         <a href="#services" class="nav-link">Услуги</a>
         <a href="#about" class="nav-link">О нас</a>
         <a href="#prices" class="nav-link">Цены</a>
-        <a href="#calculator" class="nav-link">Калькулятор</a>
         <a href="#reviews" class="nav-link">Отзывы</a>
         <a href="#blog" class="nav-link">Блог</a>
         <a href="#faq" class="nav-link">FAQ</a>
@@ -331,7 +329,6 @@
     <a @click="mobOpen = false" href="#services" class="font-display text-4xl text-ivory hover:text-champagne transition-colors">Услуги</a>
     <a @click="mobOpen = false" href="#about" class="font-display text-4xl text-ivory hover:text-champagne transition-colors">О нас</a>
     <a @click="mobOpen = false" href="#prices" class="font-display text-4xl text-ivory hover:text-champagne transition-colors">Цены</a>
-    <a @click="mobOpen = false" href="#calculator" class="font-display text-4xl text-ivory hover:text-champagne transition-colors">Калькулятор</a>
     <a @click="mobOpen = false" href="#reviews" class="font-display text-4xl text-ivory hover:text-champagne transition-colors">Отзывы</a>
     <a @click="mobOpen = false" href="#blog" class="font-display text-4xl text-ivory hover:text-champagne transition-colors">Блог</a>
     <a @click="mobOpen = false" href="#faq" class="font-display text-4xl text-ivory hover:text-champagne transition-colors">FAQ</a>
@@ -896,106 +893,6 @@
   </div>
 </section>
 
-<!-- CALCULATOR -->
-<section id="calculator" class="relative py-24 lg:py-32 bg-gunmetal overflow-hidden" style="background-color:#141415" aria-label="Калькулятор услуг">
-  <div class="relative container-mks" x-data="{
-    device: 'phone',
-    selected: { phone: [], laptop: [], tv: [], washing: [] },
-    services: {
-      phone: [
-        { name: 'Замена модуля дисплея (в сборе)', price: 10000 },
-        { name: 'Замена аккумулятора', price: 8000 },
-        { name: 'Замена разъёма зарядки', price: 5000 },
-        { name: 'Замена динамика / микрофона', price: 8000 },
-        { name: 'Замена камеры', price: 8000 },
-        { name: 'Замена задней крышки', price: 8000 },
-        { name: 'Прошивка / снятие блокировок', price: 8000 },
-        { name: 'Ремонт после попадания влаги', price: 10000 }
-      ],
-      laptop: [
-        { name: 'Замена модуля дисплея', price: 12000 },
-        { name: 'Замена клавиатуры', price: 10000 },
-        { name: 'Замена аккумулятора', price: 10000 },
-        { name: 'Чистка системы охлаждения', price: 12000 },
-        { name: 'Замена термопасты', price: 12000 },
-        { name: 'Замена кулера охлаждения', price: 10000 },
-        { name: 'Замена HDD / SSD', price: 12000 },
-        { name: 'Прошивка / снятие пароля', price: 8000 },
-        { name: 'Ремонт материнской платы', price: 15000 }
-      ],
-      tv: [
-        { name: 'Диагностика телевизора', price: 5000 },
-        { name: 'Замена блока питания', price: 12000 },
-        { name: 'Замена подсветки LED', price: 15000 },
-        { name: 'Замена матрицы', price: 25000 },
-        { name: 'Замена конденсаторов', price: 8000 },
-        { name: 'Ремонт материнской платы', price: 15000 },
-        { name: 'Замена динамиков', price: 8000 },
-        { name: 'Ремонт после скачков напряжения', price: 10000 }
-      ],
-      washing: [
-        { name: 'Замена подшипников и сальника', price: 18000 },
-        { name: 'Ремонт / замена основной платы', price: 13000 },
-        { name: 'Замена мотора', price: 13000 },
-        { name: 'Замена насоса / клапана', price: 12000 },
-        { name: 'Замена манжеты люка', price: 12000 },
-        { name: 'Замена ремня / верхней крышки', price: 8000 },
-        { name: 'Замена ТЭНа', price: 8000 },
-        { name: 'Диагностика', price: 5000 }
-      ]
-    },
-    get total() {
-      return this.selected[this.device].reduce((s, i) => s + i.price, 0)
-    },
-    isSelected(name) {
-      return this.selected[this.device].some(s => s.name === name)
-    },
-    toggle(service) {
-      const arr = this.selected[this.device]
-      const idx = arr.findIndex(s => s.name === service.name)
-      if (idx > -1) arr.splice(idx, 1); else arr.push(service)
-    },
-    fmt(n) {
-      return n.toLocaleString('ru-RU') + ' ₸'
-    }
-  }">
-    <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
-      <p class="eyebrow eyebrow-center mb-6"><span class="dot"></span> Калькулятор услуг</p>
-      <h2 class="section-title">Рассчитайте стоимость <em>ремонта онлайн</em></h2>
-      <p class="section-lead mt-6 max-w-2xl mx-auto">Выберите устройство и отметьте нужные услуги — получите предварительную стоимость</p>
-    </div>
-
-    <div class="flex flex-wrap justify-center gap-2 mb-12" data-aos="fade-up">
-      <button class="price-tab" :class="{ 'active': device === 'phone' }" @click="device = 'phone'">Сотовый телефон</button>
-      <button class="price-tab" :class="{ 'active': device === 'laptop' }" @click="device = 'laptop'">Ноутбук</button>
-      <button class="price-tab" :class="{ 'active': device === 'tv' }" @click="device = 'tv'">Телевизор</button>
-      <button class="price-tab" :class="{ 'active': device === 'washing' }" @click="device = 'washing'">Стиральная машина</button>
-    </div>
-
-    <div class="max-w-2xl mx-auto" data-aos="fade-up">
-      <template x-for="(service, idx) in services[device]" :key="idx">
-        <label class="flex items-center gap-4 px-5 py-4 border-b border-steel/30 cursor-pointer transition-colors hover:bg-steel/20"
-          :class="{ 'bg-steel/20 border-champagne/40 border-b-champagne/40': isSelected(service.name) }">
-          <input type="checkbox" class="calc-checkbox"
-            :checked="isSelected(service.name)"
-            @change="toggle(service)">
-          <span class="flex-1 font-body text-sm text-ivory leading-snug" x-text="service.name"></span>
-          <span class="font-ui text-sm font-bold text-champagne nums whitespace-nowrap" x-text="fmt(service.price)"></span>
-        </label>
-      </template>
-    </div>
-
-    <div class="max-w-2xl mx-auto mt-10 p-6 lg:p-8 border border-champagne/30" style="background:#1C1C1E" data-aos="fade-up">
-      <div class="flex items-center justify-between">
-        <span class="font-body text-base text-ivory">Предварительная стоимость:</span>
-        <span class="font-display text-3xl text-champagne font-bold nums" x-text="fmt(total)"></span>
-      </div>
-      <p class="font-body text-xs text-pearl/50 mt-3">Окончательная стоимость определяется после бесплатной диагностики. Цены указаны за работу без учёта запчастей.</p>
-      <a href="#contact" class="btn-primary mt-6 w-full justify-center">Оставить заявку</a>
-    </div>
-  </div>
-</section>
-
 <!-- TEAM -->
 <section id="team" class="relative py-24 lg:py-32 bg-graphite overflow-hidden" aria-label="Наша команда">
 
@@ -1449,7 +1346,6 @@
         <ul class="space-y-3">
           <li><a href="#about" class="font-body text-sm text-pearl/50 hover:text-champagne transition-colors">О нас</a></li>
           <li><a href="#prices" class="font-body text-sm text-pearl/50 hover:text-champagne transition-colors">Цены</a></li>
-          <li><a href="#calculator" class="font-body text-sm text-pearl/50 hover:text-champagne transition-colors">Калькулятор</a></li>
           <li><a href="#reviews" class="font-body text-sm text-pearl/50 hover:text-champagne transition-colors">Отзывы</a></li>
           <li><a href="#blog" class="font-body text-sm text-pearl/50 hover:text-champagne transition-colors">Блог</a></li>
           <li><a href="#faq" class="font-body text-sm text-pearl/50 hover:text-champagne transition-colors">FAQ</a></li>
