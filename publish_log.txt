@@ -1,0 +1,54 @@
+==================================================
+PUBLISHING FULL ARTICLES
+==================================================
+
+Bot OK: @albi_service_semey_bot
+
+Found 15 articles. Starting...
+
+[1/15] https://www.albi-service.kz/blog/sovety/sovet-pri-remonte-telefona/
+  SKIPPED - too little text (26 chars)
+[2/15] https://www.albi-service.kz/blog/sovety/telefon-upal-i-displej-razbilsya/
+  SKIPPED - too little text (44 chars)
+[3/15] https://www.albi-service.kz/blog/sovety/telefon-upal-v-vodu/
+  SKIPPED - too little text (32 chars)
+[4/15] https://www.albi-service.kz/blog/sovety/sovety-po-zaryadke-i-nastrojke-telefona/
+  SKIPPED - too little text (38 chars)
+[5/15] https://www.albi-service.kz/blog/pomoshh-telefony-samsung/nashi-rekomendaczii-po-uhodu-za-smartfonami/
+  SKIPPED - too little text (41 chars)
+[6/15] https://www.albi-service.kz/blog/pomoshh-telefony-samsung/rukovodstvo-po-osnovnym-funkcziyam-smartfona-samsung/
+  Title: Руководство по основным функциям смартфона Samsung
+  Text: 50 chars
+  Image: https://www.albi-service.kz/wp-content/uploads/2025/06/📱-kak-nastroit-smartfon-samsung-posle-pervogo-vklyucheniya-1.png
+  Downloading image...
+  Image size: 82759 bytes
+  Photo sent
+  Full text sent
+[7/15] https://www.albi-service.kz/blog/pomoshh-telefony-samsung/pochemu-smartfon-peregrevaetsya/
+  SKIPPED - too little text (30 chars)
+[8/15] https://www.albi-service.kz/blog/pomoshh-telefony-samsung/zashhita-telefona-ot-povrezhdenij/
+  SKIPPED - too little text (30 chars)
+[9/15] https://www.albi-service.kz/blog/sovety/kak-prodlit-srok-sluzhby-batarei/
+  SKIPPED - too little text (44 chars)
+[10/15] https://www.albi-service.kz/blog/stati/pochemu-stoit-doveryat-avtorizovannomu-servisnomu-czentru/
+  SKIPPED - too little text (5 chars)
+[11/15] https://www.albi-service.kz/blog/stati/remont-telefonov-samsung/
+  SKIPPED - too little text (15 chars)
+[12/15] https://www.albi-service.kz/blog/stati/pravila-provedenija-garantijnogo-i-post-garantijnogo-obsluzhivanija-v-avtorizovannom-servisnom-centre-albi-asc/
+  Title: Правила проведения гарантийного и пост гарантийного обслуживания
+  Text: 64 chars
+  Image: https://www.albi-service.kz/wp-content/uploads/2025/05/image-2.jpg
+  Downloading image...
+  Image size: 40299 bytes
+  Photo sent
+  Full text sent
+[13/15] https://www.albi-service.kz/blog/stati/samsung-care/
+  SKIPPED - too little text (15 chars)
+[14/15] https://www.albi-service.kz/blog/stati/samsung-sare-adh-zashhita-ekrana/
+  SKIPPED - too little text (32 chars)
+[15/15] https://www.albi-service.kz/blog/stati/faq/
+  SKIPPED - too little text (12 chars)
+
+==================================================
+DONE! Success: 2, Failed: 13
+==================================================
