@@ -214,6 +214,20 @@
     .back-to-top:hover{border-color:#D4A843;box-shadow:0 0 20px rgba(212,168,67,0.2)}
 
     .reviews-track.paused{animation-play-state:paused}
+
+    .blog-grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
+    @media(min-width:640px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:1024px){.blog-grid{grid-template-columns:repeat(3,1fr)}}
+    .blog-card{display:flex;flex-direction:column;border:1px solid #3A3A3D;background-color:#2A2A2D;transition:all 0.5s cubic-bezier(0.16,1,0.3,1);overflow:hidden}
+    .blog-card:hover{transform:translateY(-0.25rem);border-color:#D4A843;box-shadow:0 12px 40px rgba(0,0,0,0.5)}
+    .blog-card-image{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+    .blog-card-body{padding:1.25rem;flex:1;display:flex;flex-direction:column}
+    .blog-card-title{font-family:Manrope,system-ui,sans-serif;font-size:0.9375rem;font-weight:700;color:#F5F5F0;line-height:1.4;margin-bottom:0.5rem}
+    .blog-card-excerpt{font-family:Inter,system-ui,sans-serif;font-size:0.8125rem;line-height:1.6;color:rgba(232,230,225,0.6);flex:1;margin-bottom:0.75rem}
+    .blog-card-link{font-family:Manrope,system-ui,sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#D4A843;display:inline-flex;align-items:center;gap:0.375rem;transition:color 0.3s}
+    .blog-card-link:hover{color:#E5C16C}
+    .blog-card-link svg{width:14px;height:14px;transition:transform 0.3s}
+    .blog-card-link:hover svg{transform:translateX(3px)}
   </style>
 
   <script type="application/ld+json">
@@ -1024,6 +1038,74 @@
         </a>
         <a href="tel:+77083677305" class="btn-outline">Позвонить</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="relative py-24 lg:py-32 bg-graphite overflow-hidden" aria-label="Блог">
+  <div class="absolute top-0 left-0 right-0 gold-divider"></div>
+  <div class="relative container-mks">
+    <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
+      <p class="eyebrow eyebrow-center mb-6"><span class="dot"></span> Блог</p>
+      <h2 class="section-title"><em>Полезные статьи</em></h2>
+      <p class="section-lead mt-6 max-w-2xl mx-auto">Советы экспертов сервисного центра АЛБИ по ремонту и обслуживанию техники</p>
+    </div>
+
+    <div class="blog-grid" data-aos="fade-up">
+
+      <a href="https://www.albi-service.kz/blog/stati/kak-otkryt-shampanskoe-bez-ruk-ne-prik/" target="_blank" rel="noopener" class="blog-card">
+        <img class="blog-card-image" src="https://www.albi-service.kz/wp-content/uploads/2025/05/c9c8e6a7-0228-4beb-86d2-ea12eb2f24b8-1024x576.png" alt="Гарантийный ремонт" loading="lazy">
+        <div class="blog-card-body">
+          <h3 class="blog-card-title">Как сдать по гарантии технику на ремонт</h3>
+          <p class="blog-card-excerpt">Какие документы нужны, когда могут отказать и что нужно знать потребителю о гарантийном ремонте в Казахстане.</p>
+          <span class="blog-card-link">Читать статью <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+
+      <a href="https://www.albi-service.kz/blog/sovety/kak-prodlit-srok-sluzhby-batarei/" target="_blank" rel="noopener" class="blog-card">
+        <img class="blog-card-image" src="https://www.albi-service.kz/wp-content/uploads/2025/05/image.jpg" alt="Аккумулятор смартфона" loading="lazy">
+        <div class="blog-card-body">
+          <h3 class="blog-card-title">Как продлить жизнь аккумулятора смартфона</h3>
+          <p class="blog-card-excerpt">Признаки износа батареи, причины ускоренного старения и практические советы по продлению срока службы аккумулятора.</p>
+          <span class="blog-card-link">Читать статью <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+
+      <a href="https://www.albi-service.kz/blog/sovety/telefon-upal-v-vodu/" target="_blank" rel="noopener" class="blog-card">
+        <img class="blog-card-image" src="https://www.albi-service.kz/wp-content/uploads/2025/05/6f0df3028a0bd860e0f88261124c2e30.jpg" alt="Телефон в воде" loading="lazy">
+        <div class="blog-card-body">
+          <h3 class="blog-card-title">Что делать, если телефон упал в воду?</h3>
+          <p class="blog-card-excerpt">Пошаговая инструкция: как спасти утопленный смартфон, чего категорически нельзя делать и когда пора в сервис.</p>
+          <span class="blog-card-link">Читать статью <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+
+      <a href="https://www.albi-service.kz/blog/pomoshh-telefony-samsung/pochemu-smartfon-peregrevaetsya/" target="_blank" rel="noopener" class="blog-card">
+        <img class="blog-card-image" src="https://www.albi-service.kz/wp-content/uploads/2025/06/1-e1750049310758.jpg" alt="Перегрев ноутбука" loading="lazy">
+        <div class="blog-card-body">
+          <h3 class="blog-card-title">Почему ноутбук перегревается и как это исправить</h3>
+          <p class="blog-card-excerpt">Основные причины перегрева, отличия программных и аппаратных проблем, практические шаги по устранению.</p>
+          <span class="blog-card-link">Читать статью <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+
+      <a href="https://www.albi-service.kz/blog/sovety/telefon-upal-i-displej-razbilsya/" target="_blank" rel="noopener" class="blog-card">
+        <img class="blog-card-image" src="https://www.albi-service.kz/wp-content/uploads/2025/05/palm-pvg100e-le-mini-smartphone-qui-na-peur-de-rien.jpg" alt="Разбитый дисплей" loading="lazy">
+        <div class="blog-card-body">
+          <h3 class="blog-card-title">Телефон упал, дисплей разбился. Что делать?</h3>
+          <p class="blog-card-excerpt">Простые шаги от экспертов: как сохранить данные, оценить повреждения и выбрать правильный сервис для замены экрана.</p>
+          <span class="blog-card-link">Читать статью <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="text-center mt-12" data-aos="fade-up">
+      <a href="https://www.albi-service.kz/blog/" target="_blank" rel="noopener" class="btn-primary">
+        Все статьи
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
     </div>
   </div>
 </section>
