@@ -210,9 +210,11 @@ async function getUpdates() {
     }
 }
 
-// Запуск polling
-setInterval(getUpdates, 1000);
-getUpdates(); // Первый запуск сразу
+// Запуск polling (только для локальной разработки)
+if (process.env.VERCEL !== '1') {
+    setInterval(getUpdates, 1000);
+    getUpdates();
+}
 
 // === API ROUTES ===
 
@@ -260,12 +262,16 @@ app.get('/api/stats', (req, res) => {
     });
 });
 
-// Запуск сервера
-app.listen(PORT, () => {
-    console.log('========================================');
-    console.log('🚀 Сервер АЛБИ запущен');
-    console.log(`📍 Порт: ${PORT}`);
-    console.log(`🤖 Бот: @albi_service_semey`);
-    console.log('========================================');
-    console.log(`Откройте http://localhost:${PORT} для просмотра сайта`);
-});
+// Запуск сервера (только для локальной разработки, не для Vercel)
+if (process.env.VERCEL !== '1') {
+    app.listen(PORT, () => {
+        console.log('========================================');
+        console.log('🚀 Сервер АЛБИ запущен');
+        console.log(`📍 Порт: ${PORT}`);
+        console.log(`🤖 Бот: @albi_service_semey`);
+        console.log('========================================');
+        console.log(`Откройте http://localhost:${PORT} для просмотра сайта`);
+    });
+}
+
+module.exports = app;
